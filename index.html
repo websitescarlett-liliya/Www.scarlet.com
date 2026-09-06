@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scarlet - Platform Keberhasilan & Anti-Bullying</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="video-container">
+    <video autoplay muted loop id="bg-video">
+      <source src="https://files.catbox.moe/lj5x8x.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video HTML5.
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <header class="profile-header">
+    <div class="profile-card">
+      <div class="avatar-wrapper">
+        <img src="https://via.placeholder.com/60" alt="Profile Picture" id="user-avatar">
+        <button class="edit-btn" id="edit-profile-btn" title="Edit Profil">
+          <i class="fas fa-pen"></i>
+        </button>
+      </div>
+      <div class="user-info">
+        <h3 id="username">Siswa Teladan</h3>
+        <span class="user-status"><i class="fas fa-circle"></i> Online</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span><i class="fas fa-handshake"></i> Mari kita bekerja sama untuk keberhasilan kelas!</span>
+      <span><i class="fas fa-shield-alt"></i> Bersama ciptakan lingkungan sekolah yang bebas bullying!</span>
+      <span><i class="fas fa-rocket"></i> Sukses bersama melalui kolaborasi dan kepedulian!</span>
+    </div>
+  </div>
+
+  <main class="container">
+    
+    <section class="search-section">
+      <div class="search-box">
+        <i class="fas fa-globe search-icon"></i>
+        <input type="text" id="search-input" value="Www.scarlet.com" readonly>
+        <button class="search-btn"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <p id="dynamic-subtext" class="subtext">Buka halaman tersebut untuk lebih lanjut</p>
+    </section>
+
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="card-icon"><i class="fas fa-award"></i></div>
+        <h4>Inspirasi Sukses</h4>
+        <p>Lihat contoh nyata kerja sama tim dan integritas yang memicu prestasi kelas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon"><i class="fas fa-heart-broken"></i></div>
+        <h4>Anti-Bullying Zone</h4>
+        <p>Edukasi, kampanye kepedulian, dan ruang aman untuk saling merangkul.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+        <h4>Suara Siswa</h4>
+        <p>Ruang aspirasi untuk menyampaikan ide, laporan, dan apresiasi positif.</p>
+      </div>
+    </section>
+
+    <section class="showcase-section">
+      <div class="section-header">
+        <h2><i class="fas fa-door-open"></i> Ruang Edukasi & Action</h2>
+        <p>Pilih topik di bawah untuk melihat contoh positif dan edukasi pencegahan bullying</p>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab('keberhasilan')">Contoh Keberhasilan</button>
+        <button class="tab-btn" onclick="switchTab('bullying')">Edukasi Anti-Bullying</button>
+      </div>
+
+      <div class="tab-content active" id="tab-keberhasilan">
+        <div class="showcase-grid">
+          <div class="showcase-card">
+            <span class="badge success">Keteladanan</span>
+            <h3>Belajar Kelompok Tanpa Diskriminasi</h3>
+            <p>Membantu teman yang kesulitan memahami pelajaran tanpa memandang latar belakang.</p>
+          </div>
+          <div class="showcase-card">
+            <span class="badge success">Inovasi</span>
+            <h3>Project Kebersihan Bersama</h3>
+            <p>Menjaga kerapihan kelas secara gotong royong hingga meraih predikat kelas terbaik.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-bullying">
+        <div class="showcase-grid">
+          <div class="showcase-card warning">
+            <span class="badge danger">Stop Verbal Bullying</span>
+            <h3>Hentikan Ejekan & Panggilan Buruk</h3>
+            <p>Kata-kata bisa melukai. Mari biasakan saling menyapa dengan rasa hormat dan empati.</p>
+          </div>
+          <div class="showcase-card warning">
+            <span class="badge danger">Cyberbullying Alert</span>
+            <h3>Bijak Berinteraksi di Media Sosial</h3>
+            <p>Jangan menyebarkan rumor atau komentar jahat di grup chat maupun media sosial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal" id="profile-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h3>Edit Profil</h3>
+      <form id="edit-form">
+        <div class="form-group">
+          <label for="input-name">Nama Pengguna:</label>
+          <input type="text" id="input-name" placeholder="Masukkan nama baru">
+        </div>
+        <button type="submit" class="submit-btn">Simpan Perubahan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
